@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="#">
+    <title>Document</title>
+</head>
+<body>
+
+    <div>
+        <p id="generated-password">Password</p>
+        <p id="clipboard-copy-button">Copy icon</p>
+    </div>
+
+    <div>
+        <p>Character Length</p>
+        <p id="length-value">0</p>
+    </div>
+
+    <div>
+        <form action="">
+            <input type="checkbox" id="include-uppercase" name="include-uppercase" value="uppercase">
+            <label for="include-uppercase">Include Uppercase Letters</label>
+
+            <input type="checkbox" id="include-lowercase" name="include-lowercase" value="lowercase">
+            <label for="include-lowercase">Include Lowercase Letters</label>
+
+            <input type="checkbox" id="include-numbers" name="include-numbers" value="numbers">
+            <label for="include-numbers">Include Numbers</label>
+
+            <input type="checkbox" id="include-symbols" name="include-symbols" value="symbols">
+            <label for="include-symbols">Include Symbols</label>
+
+            <input type="submit" value="Generate">
+        </form>
+    </div>
+
+    <div>
+        <p>Strength</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
