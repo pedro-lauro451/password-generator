@@ -1,6 +1,7 @@
 //Password display & Clipboard
 var clipboardButton = document.getElementById('clipboard-copy-button');
 var generatedPwd = document.getElementById('generated-password');
+const displayPwd = document.querySelectorAll('.pwd-container');
 
 clipboardButton.onclick = function()
 {
@@ -57,13 +58,33 @@ function defineString()
     return finalChars;
 };
 
+function checkIfEmpty(length)
+{
+    if(length > 0)
+    {
+        displayPwd.forEach(content => {
+            content.style.display = 'flex';
+        });
+    }
+
+    if(length == 0)
+    {
+        displayPwd.forEach(content => {
+            content.style.display = 'none';
+        });
+    }
+};
+
 const generatePassword = document.getElementById('generate-password');
 
 generatePassword.onclick = function()
 {
     chars = defineString();
+
     var pwdLength = length.innerHTML;
     var result = '';
+
+    checkIfEmpty(pwdLength);
 
     for(var i = 0; i < pwdLength; i++)
     {

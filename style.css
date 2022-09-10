@@ -1,15 +1,73 @@
 body
 {
-    background-color: #22202b;;
+    background-color: #111016;
+    color: #bcbbc3;
+}
+
+.password-text
+{
+    color: #a4ffaf;
 }
 
 .container
 {
+    height: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #403f48;
+}
+
+.pwd-container
+{
+    display: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    word-wrap: break-word;
+}
+
+.btn-container
+{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.form-container
+{
+    display: flex;
+    justify-content: center;
+    align-items:flex-start;
+    flex-direction: column;
+}
+
+.item
+{
+    margin: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    text-align: center;
+    background-color: #24232b;
+    flex-wrap: wrap;
+    word-wrap: break-word;
+}
+
+.pwd-item
+{
+    flex-wrap: wrap;
+    word-wrap: break-word;
+    align-self: center;
+}
+
+.pwd-item-text
+{
+    max-width: 50%;text-align: left; padding-left: 20px; padding-right: 20px;
+}
+
+.pwd-item img
+{
+    cursor: pointer;
 }
 
 .slider-container
@@ -27,9 +85,18 @@ body
     margin-bottom: 25px;
 }
 
+.length-container
+{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
 #length-value
 {
     font-size: 28px;
+    color: #a4ffaf;
 }
 
 input[type=range]::-webkit-slider-thumb 
@@ -43,6 +110,12 @@ input[type=range]::-webkit-slider-thumb
     cursor: pointer;
 }
 
+input[type=range]::-webkit-slider-thumb:hover
+{
+    background: #a4ffaf;
+    border: 1px solid #a4ffaf;
+}
+
 .slider::-moz-range-thumb
 {
     background-color: #ebeaef;
@@ -50,10 +123,46 @@ input[type=range]::-webkit-slider-thumb
     cursor: pointer;
 }
 
+.slider::-moz-range-thumb:hover
+{
+    background: #a4ffaf;
+    border: 1px solid #a4ffaf;
+}
+
 .slider
 {
     -webkit-appearance: none;
-    background: #22202b;
+    background: #111016;
     border-radius: 25px;
     height: 6px;
 }
+
+.btn
+{
+    background-color: #a4ffaf;
+    padding: 10px 20px 10px 20px;
+    border: 1px #a4ffaf solid;
+    cursor: pointer;
+    text-align: center;
+    color: #000000;
+}
+
+.btn:hover
+{
+    background-color: #24232b;
+    color:#a4ffaf;
+}
+
+[type=checkbox] {
+    width: 0.8rem;
+    height: 0.8rem;
+    vertical-align: top;
+    -webkit-appearance: none;
+    border: 1px #ffffff solid;
+    background-color: #111016;
+    cursor: pointer;
+  }
+
+  [type=checkbox]:checked {
+    background-color: #a4ffaf;
+  }
