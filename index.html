@@ -6,9 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="#">
-    <title>Document</title>
+    <title>Password Generator</title>
 </head>
 <body>
+
+    <div class="text-container">
+        <p>Password Generator</p>
+    </div>
+
     <div class="pwd-container">
         <div class="pwd-item-text">
                 <p id="generated-password" class="password-text"></p>
@@ -22,7 +27,7 @@
         <div class="item">
             <div>
                 <div class="length-container">
-                    <p style="align-self: center;">Character Length</p>
+                    <p style="align-self: center;">Length</p>
                     <span id="length-value" style="align-self: center;">0</span>
                 </div>
                 
@@ -35,26 +40,25 @@
         
             <div>
                 <form action="" class="form-container">
-                    <div>
+                    <div class="form-item">
                         <input type="checkbox" id="include-uppercase" name="include-uppercase" value="uppercase">
-                        <label for="include-uppercase">Include Uppercase Letters</label>
+                        <label for="include-uppercase">Uppercase</label>
                     </div>
                     
-                    <div>
+                    <div class="form-item">
                         <input type="checkbox" id="include-lowercase" name="include-lowercase" value="lowercase">
-                        <label for="include-lowercase">Include Lowercase Letters</label>
+                        <label for="include-lowercase">Lowercase</label>
                     </div>
                     
-                    <div>
+                    <div class="form-item">
                         <input type="checkbox" id="include-numbers" name="include-numbers" value="numbers">
-                        <label for="include-numbers">Include Numbers</label>
+                        <label for="include-numbers">Numbers</label>
                     </div>
                     
-                    <div>
+                    <div class="form-item">
                         <input type="checkbox" id="include-symbols" name="include-symbols" value="symbols">
-                        <label for="include-symbols">Include Symbols</label>    
+                        <label for="include-symbols">Symbols</label>    
                     </div>
-                    
                 </form>
             </div>
         
@@ -62,6 +66,14 @@
                 <p id="generate-password" class="btn">Generate</p>
             </div> 
         </div>
+    </div>
+
+    <div class="text-container">
+        <p class="checkbox-error-msg">Please select an option</p>
+    </div>
+
+    <div class="text-container">
+        <p class="length-error-msg">Please specify a length</p>
     </div>
 
     <script src="script.js"></script>

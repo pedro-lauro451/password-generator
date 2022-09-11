@@ -35,7 +35,7 @@ function defineString()
     var uppercaseChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
     var lowercaseChars = 'abcdefghijklmnopqrstuvwxyz';
     var numberChars = '0123456789';
-    var symbolChars = '!@#$%^&*()';
+    var symbolChars = '!@#$%^*()';
 
     var finalChars = '';
 
@@ -58,12 +58,20 @@ function defineString()
     return finalChars;
 };
 
+const toggleLengthErrorMsg = document.querySelectorAll('.length-error-msg');
+const toggleCheckboxErrorMsg = document.querySelectorAll('.checkbox-error-msg');
+
+//Checks for empty length
 function checkIfEmpty(length)
 {
     if(length > 0)
     {
         displayPwd.forEach(content => {
             content.style.display = 'flex';
+        });
+
+        toggleLengthErrorMsg.forEach(content => {
+            content.style.display = 'none';
         });
     }
 
@@ -72,8 +80,39 @@ function checkIfEmpty(length)
         displayPwd.forEach(content => {
             content.style.display = 'none';
         });
+
+        toggleLengthErrorMsg.forEach(content => {
+            content.style.display = 'flex';
+        });
     }
 };
+
+//Checks for empty checkboxes
+function checkifUnchecked()
+{
+    var uppercaseIsChecked = includeUppercase.checked;
+    var lowercaseIsChecked = includeLowercase.checked;
+    var numbersIsChecked = includeNumbers.checked;
+    var symbolsIsChecked = includeSymbols.checked;
+
+    if(uppercaseIsChecked == false && lowercaseIsChecked == false && numbersIsChecked == false 
+    && symbolsIsChecked == false)
+    {
+        displayPwd.forEach(content => {
+            content.style.display = 'none';
+        });
+
+        toggleCheckboxErrorMsg.forEach(content => {
+            content.style.display = 'flex';
+        });
+    }
+    else
+    {
+        toggleCheckboxErrorMsg.forEach(content => {
+            content.style.display = 'none';
+        });
+    }
+}
 
 const generatePassword = document.getElementById('generate-password');
 
@@ -85,6 +124,7 @@ generatePassword.onclick = function()
     var result = '';
 
     checkIfEmpty(pwdLength);
+    checkifUnchecked();
 
     for(var i = 0; i < pwdLength; i++)
     {

@@ -2,16 +2,27 @@ body
 {
     background-color: #111016;
     color: #bcbbc3;
+    font-family: 'Courier New', monospace;
+    font-size:15px;
 }
 
 .password-text
 {
-    color: #a4ffaf;
+    color: #5ebf6a;
 }
 
 .container
 {
     height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.text-container
+{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -40,6 +51,11 @@ body
     justify-content: center;
     align-items:flex-start;
     flex-direction: column;
+}
+
+.form-item
+{
+    margin: 5px;
 }
 
 .item
@@ -96,7 +112,7 @@ body
 #length-value
 {
     font-size: 28px;
-    color: #a4ffaf;
+    color: #5ebf6a;
 }
 
 input[type=range]::-webkit-slider-thumb 
@@ -112,8 +128,8 @@ input[type=range]::-webkit-slider-thumb
 
 input[type=range]::-webkit-slider-thumb:hover
 {
-    background: #a4ffaf;
-    border: 1px solid #a4ffaf;
+    background: #5ebf6a;
+    border: 1px solid #5ebf6a;
 }
 
 .slider::-moz-range-thumb
@@ -125,8 +141,8 @@ input[type=range]::-webkit-slider-thumb:hover
 
 .slider::-moz-range-thumb:hover
 {
-    background: #a4ffaf;
-    border: 1px solid #a4ffaf;
+    background: #5ebf6a;
+    border: 1px solid #5ebf6a;
 }
 
 .slider
@@ -139,9 +155,9 @@ input[type=range]::-webkit-slider-thumb:hover
 
 .btn
 {
-    background-color: #a4ffaf;
+    background-color: #5ebf6a;
     padding: 10px 20px 10px 20px;
-    border: 1px #a4ffaf solid;
+    border: 1px #5ebf6a solid;
     cursor: pointer;
     text-align: center;
     color: #000000;
@@ -150,7 +166,7 @@ input[type=range]::-webkit-slider-thumb:hover
 .btn:hover
 {
     background-color: #24232b;
-    color:#a4ffaf;
+    color:#5ebf6a;
 }
 
 [type=checkbox] {
@@ -164,5 +180,17 @@ input[type=range]::-webkit-slider-thumb:hover
   }
 
   [type=checkbox]:checked {
-    background-color: #a4ffaf;
+    background-color: #5ebf6a;
   }
+
+.length-error-msg
+{
+    color: #ac2633;
+    display: none;
+}
+
+.checkbox-error-msg
+{
+    color: #ac2633;
+    display: none;
+}
