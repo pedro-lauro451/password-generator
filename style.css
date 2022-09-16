@@ -194,3 +194,9 @@ input[type=range]::-webkit-slider-thumb:hover
     color: #ac2633;
     display: none;
 }
+
+.password-strength
+{
+    color:#bcbbc3;
+}
+
